@@ -257,6 +257,15 @@ header .nav {
     height: 100%;
     width: 100%;
 
+    background-image: var(--foto-portada);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+
     background-color: #fff;
     color: #000;
   }
