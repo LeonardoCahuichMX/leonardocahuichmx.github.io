@@ -92,12 +92,12 @@ textarea {
 
 .inicio {
   --color-portada-texto: #000;
-  --foto-portada: url("../img/Inicio/IMG_8663.jpeg");
+  --foto-portada: url("../img/Inicio/skull-5850552_1920.png");
 }
 
 .miedo {
   --color-portada-texto: #fff;
-  --foto-portada: url("../img/miedo/apocalypse-2273069_1280 2.jpg");
+  --foto-portada: url("../img/Inicio/skull-5850552_1920.png");
 }
 .vas {
   --color-portada-texto: #fff;
@@ -131,6 +131,8 @@ header {
 
   margin: 0;
   padding: 10px 5%;
+
+  z-index: 999;
 
   /*background-color: #000;*/
 }
@@ -235,6 +237,18 @@ header .nav {
 
   color: #fff;
 }
+.inicio .portada {
+  background-image: var(--foto-portada);
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #fff;
+  color: #fff;
+}
   .miedo .portada .centro {
     display: flex;
     justify-content: center;
@@ -259,10 +273,14 @@ header .nav {
 
     height: 100%;
     width: 100%;
+    /*filter: url("../img/Inicio/skull-5850552_1920.png");*/
+    /*filter: invert(80%);*/
 
-    background-color: #fff;
-    color: #000;
+    -webkit-backdrop-filter: invert(80%);
+    backdrop-filter: invert(80%);
   }
+    .inicio .portada .centro .caja {
+    }
   .vas .portada .centro {
     display: flex;
     justify-content: center;
@@ -279,6 +297,7 @@ header .nav {
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
+    
   }
   
   .inicio .portada .centro .caja .titulo {
@@ -294,33 +313,42 @@ header .nav {
     }
     .inicio .portada .centro .caja {
       text-align: center;
-      display: flex;
+      /*display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;*/
     }
       .inicio .portada .centro .caja .titulo-1 {
-        font-size: 1em;
-        writing-mode:vertical-lr;
-        text-orientation:upright;
+        font-size: 1.2em;
+        color: #000;
+        /*writing-mode:vertical-lr;
+        text-orientation:upright;*/
       }
       .miedo .portada .centro .caja .titulo-1, .vas .portada .centro .caja .titulo-1 {
         font-size: 1em;
       }
       .inicio .portada .centro .caja .titulo-2 {
-        font-size: 1.5em;
-        writing-mode:vertical-lr;
-        text-orientation:upright;
+        font-size: 15em;
+        color: #000;
+        /*writing-mode:vertical-lr;
+        text-orientation:upright;*/
       }
       .miedo.portada .centro .caja .titulo-2, .vas .portada .centro .caja .titulo-2 {
         font-size: 1.5em;
       }
       .inicio .portada .centro .caja .titulo-3 {
-        font-size: 6em;
-        writing-mode:vertical-lr;
-        text-orientation:upright;
+        font-size: 2.8em;
+        margin-top: -80px;
+        /*writing-mode:vertical-lr;
+        text-orientation:upright;*/
       }
       .miedo .portada .centro .caja .titulo-3, .vas .portada .centro .caja .titulo-3 {
         font-size: 3.5em;
+      }
+
+      .inicio .portada .centro .caja span {
+        background-color: #fff;
+        color: #000;
+        padding: 10px 20px;
       }
 
 /*@media only screen and (max-width: 560px) {
@@ -344,6 +372,62 @@ header .nav {
     background-size: 150%;
   }
 }*/
+
+/* ##################################################
+
+  Secciones Cahuich
+  
+##################################################### */
+
+/* ##################################################
+  Seccion portafolio
+##################################################### */
+
+.seccion-aviso {
+  position: absolute;
+  left: 0;
+  top: auto;
+
+  width: auto;
+  height: 100vh;
+  /*background-color: #f3f3f3;*/
+
+  z-index: 999;
+
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+        text-orientation:sideways;
+
+        text-align: right;
+        padding-bottom: 50px;
+}
+.seccion-aviso span {
+  opacity: 0.5;
+  font-size: 80%;
+}
+.seccion-portafolio {
+  margin: 0;
+  padding: 0;
+  margin-left: 100px;
+}
+
+.ts {
+  text-align: center;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 560px) {
+  .seccion-portafolio {
+    margin-left: 50px !important;
+  }
+  .inicio .portada .centro .caja .titulo-2 {
+    font-size: 10em;
+  }
+  .inicio .portada .centro .caja .titulo-3 {
+    font-size: 2.8em;
+    margin-top: -50px;
+  }
+}
 /* ##################################################
 
   Secciones conteido
