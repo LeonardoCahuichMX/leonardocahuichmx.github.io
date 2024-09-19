@@ -101,7 +101,7 @@ textarea {
 }
 .vas {
   --color-portada-texto: #fff;
-  --foto-portada: url("../img/vas/IMG_8280.png");
+  --foto-portada: url("../img/vas/IMG_8280.jpeg");
 }
 
 /* ##################################################
@@ -111,9 +111,6 @@ textarea {
 ##################################################### */
 
 body {
-  margin: 0;
-  padding: 0;
-
   font-family: "Open Sans", sans-serif;
 }
 
@@ -210,6 +207,12 @@ header .nav {
 
     margin-bottom: 20px;
   }
+  header .nav .sub-titulo {
+    width: 100% !important;
+    text-align: center;
+
+    margin-bottom: 20px;
+  }
   header .nav nav {
     margin-left: 0 !important;
     width: 100% !important;
@@ -256,15 +259,6 @@ header .nav {
 
     height: 100%;
     width: 100%;
-
-    background-image: var(--foto-portada);
-    background-position-x: center;
-    background-position-y: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
 
     background-color: #fff;
     color: #000;
@@ -367,6 +361,13 @@ header .nav {
 
   padding: 50px 10%;
 }
+  .inicio .seccion-basica {
+    background-color: #fff;
+    color: #fff;
+  }
+  .miedo .seccion-basica {
+    padding: 100px 10%;
+  }
 .seccion-basica-2 {
   background-color: #111;
 
@@ -374,17 +375,13 @@ header .nav {
 
   padding: 50px 10%;
 }
-
-.seccion-ce {
-  height: 100vh;
-  background-color: #000;
-
-  color: #fff;
-
-  padding: 0px 10%;
-  margin: 20px 2%;
-  border-radius: 10px;
-}
+  .inicio .seccion-basica-2 {
+    background-color: #fff;
+    color: #000;
+  }
+  .miedo .seccion-basica-2 {
+    padding: 100px 10%;
+  }
 
 .seccion-basica .sub-titulo, .seccion-basica-2 .sub-titulo, .seccion-ce .sub-titulo {
   font-weight: normal;
@@ -403,31 +400,98 @@ header .nav {
   titulo de areas
 ##################################################### */
 .titulo-col {
-  height: 400px;
+  height: 100vh;
+  width: 90%;
+
+  padding: 50px 5%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  writing-mode:vertical-lr;
+  text-orientation:upright;
+}
+.titulo-col .chino {
+  font-size: 5.5em;
+  margin-right: 1px;
+  margin-left: 0;
+}
+.titulo-col p {
+  margin-left: 1px;
+  margin-right: 0;
+  font-size: 1.4em;
 }
 /* ##################################################
   Invitacion
 ##################################################### */
 
 .inicio .invitacion {
-  height: 100vh;
+  min-height: 100vh;
 
   background-color: #fff;
   color: #000;
 
   padding: 0px 10%;
+  margin-top: 100px;
 }
 .inicio .invitacion .titulo {
   border-bottom: 5px solid #000;
 }
 
 /* ##################################################
+  Inicio seccion 1
+##################################################### */
+
+.inicio .inicio-s-1 {
+  padding: 50px 2%;
+  height: auto;
+}
+.inicio .inicio-s-1 .caja {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+.inicio .inicio-s-1 .caja .interior {
+  writing-mode:vertical-lr;
+  text-orientation:upright;
+
+  margin: 0 auto;
+}
+  .inicio .inicio-s-1 .caja .interior h1 {
+    font-size: 2.5em;
+  }
+  .inicio .inicio-s-1 .caja .caja-center {
+    margin-top: auto;
+  }
+
+@media only screen and (max-width: 1050px) {
+  .inicio .inicio-s-1 .centro {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .inicio .inicio-s-1 .caja .interior h1 {
+    font-size: 1.5em !important;
+  }
+  .inicio .inicio-s-1 .caja .caja-auto {
+    padding: 0 5%;
+  }
+}
+/* ##################################################
   Coleccion miedo
 ##################################################### */
+
+.seccion-ce {
+  height: 90vh;
+  background-color: #000;
+
+  color: #fff;
+
+  padding: 0px 10%;
+  margin: 20px 10%;
+  border-radius: 10px;
+}
 
 .coleccion-miedo {
   background-image: url("../img/Inicio/IMG_8663.jpeg");
@@ -449,7 +513,7 @@ header .nav {
 ##################################################### */
 
 .coleccion-vas {
-  background-image: url("../img/vas/IMG_8572.png");
+  background-image: url("../img/vas/IMG_8572.jpeg");
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
@@ -479,18 +543,7 @@ header .nav {
   Seccion-2
 ##################################################### */
 
-.framework-aviso {
-  margin-top: 100px;
-  padding: 50px 25%;
-
-  text-align: center;
-}
-
-/* ##################################################
-  Seccion-2
-##################################################### */
-
-.seccion-2 {
+.miedo .seccion-2 {
   padding: 50px 25%;
 
   text-align: center;
@@ -500,7 +553,7 @@ header .nav {
   Seccion-4
 ##################################################### */
 
-.seccion-4 {
+.miedo .seccion-4 {
   padding: 50px 20%;
 
   text-align: center;
@@ -510,7 +563,7 @@ header .nav {
   Seccion-6
 ##################################################### */
 
-.seccion-6 {
+.miedo .seccion-6 {
   padding: 50px 15%;
 
   text-align: center;
@@ -572,12 +625,12 @@ header .nav {
   Secciones vas
 ##################################################### */
 
-.seccion-basica {
+.vas .seccion-basica {
   background-color: #fff;
 
   color: #000;
 }
-.seccion-basica-2 {
+.vas .seccion-basica-2 {
   background-color: #fff;
 
   color: #000;
@@ -587,7 +640,7 @@ header .nav {
   Invitacion
 ##################################################### */
 
-.invitacion {
+.vas .invitacion {
 }
 
 .exhibidor-d .caja-3 {
@@ -598,7 +651,7 @@ header .nav {
   Seccion-vas-1
 ##################################################### */
 
-.seccion-vas-1 {
+.vas .seccion-vas-1 {
   padding: 50px 25%;
 
   text-align: center;
@@ -631,59 +684,6 @@ footer {
   
 ##################################################### */
 
-.centro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100%;
-  width: 100%;
-}
-.centro-no {
-  display: flex;
-
-  height: 100%;
-  width: 100%;
-}
-
-.c-caja {
-
-}
-
-.caja {
-  width: 100%;
-}
-.caja-2 {
-  width: 50%;
-}
-.caja-3 {
-  width: 33.33%;
-}
-  .contra-caja-3 {
-    width: 66.66%;
-  }
-.caja-4 {
-  width: 25%;
-}
-  .contra-caja-4 {
-    width: 75%;
-  }
-.caja-5 {
-  width: 20%;
-}
-  .contra-caja-5 {
-    width: 80%;
-  }
-
-.caja-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.caja-d {
-  margin-left: auto;
-}
 
 @media only screen and (max-width: 850px) {
   /* Style adjustments for viewports that meet the condition */
@@ -691,90 +691,31 @@ footer {
     display: block;
     width: 100%;
   }*/
-  body {
-    overflow-x: hidden;
-  }
-  img {
-    width: 100% !important;
-  }
-
   footer * {
     text-align: center;
   }
-  .responsivo {
-    display: block;
-    width: auto;
-  }
-  .r-caja {
-    width: auto;
-  }
   .seccion-basica, .seccion-basica-2 {
-    padding: 50px 10%;
+    padding: 50px 10% !important;
     text-align: left !important;
   }
   .seccion-basica p, .seccion-basica-2 p {
     text-align: justify !important;
   }
-
-  /*.seccion-2 {
-    padding: 50px 25%;
+  .vas .seccion-vas-1 {
+    padding: 50px 10%;
   }
-  .seccion-2 {
-    padding: 50px 20%;
-  }*/
-
-  h1 {
-    font-size: 2.5em !important;
+  .vas .exhibidor {
+    text-align: center !important;
   }
-  h2 {
-    font-size: 2em !important;
+  .vas .exhibidor-d .caja-3 {
+    text-align: center !important;
   }
-  h3 {
-    font-size: 1.5em !important;
-  }
-  h4 {
-    font-size: 1.2em !important;
+  .vas .exhibidor p, .vas .exhibidor-d p {
+    text-align: center !important;
   }
 }
 
-/* ##################################################
 
-  img
-  
-##################################################### */
-
-img {
-  border-radius: 10px;
-}
-
-/* ##################################################
-
-  H
-  
-##################################################### */
-
-h1 {
-  font-size: 3em;
-}
-h2 {
-  font-size: 2.5em;
-}
-h3 {
-  font-size: 2em;
-}
-h4 {
-  font-size: 1.5em;
-}
-h5 {
-  font-size: 1em;
-}
-h6 {
-  font-size: .5em;
-}
-p {
-  font-size: 1em;
-  line-height: 2em;
-}
 
 /* ##################################################
 
@@ -797,18 +738,7 @@ a.b-none {
   opacity: 0.5;
 }*/
 
-/* ##################################################
 
-  cajas
-  
-##################################################### */
-
-.hr-menor {
-  margin: 0 20%;
-}
-.hr-menor-separador {
-  margin: 100px 20%;
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
