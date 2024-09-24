@@ -537,7 +537,7 @@ header .nav {
   align-items: center;*/
 }
 .inicio .inicio-s-1 .caja .interior {
-  writing-mode:vertical-lr;
+  writing-mode:vertical-rl;
   text-orientation:upright;
 
   margin: 0 auto;
