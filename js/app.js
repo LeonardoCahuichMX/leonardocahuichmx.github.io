@@ -47,11 +47,11 @@ $(document).ready(function () {
         }
     });
     $(window).scroll(function(){
-        if($(this).scrollTop() <= alto){
+        if($(this).scrollTop() <= altoHeader){
             $('header').removeClass('header-scroll');
             /* ####Portada antigua $('.portada .caja').removeClass('caja-b');*/
         }
-        if($(this).scrollTop() > alto) {
+        if($(this).scrollTop() > altoHeader) {
             $('header').addClass('header-scroll');
             //alert("hola");
             /* ####Portada antigua $('.portada .caja').addClass('caja-b');*/
