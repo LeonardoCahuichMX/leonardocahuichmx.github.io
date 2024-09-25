@@ -114,46 +114,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  z-index: 999;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: #111c !important;
-  backdrop-filter: blur(50px);
-  color: #fff;
-
-  text-align: center;
-}
-.loader h1 {
-  margin-bottom: 0;
-}
-.loader h3 {
-  margin-top: -40px;
-  font-weight: 100;
-}
-
-/* ##################################################
-
-    Menu-Lateral
-
-##################################################### */
-
-.menu-lateral .cont-menu-lateral {
-  background-color: #000000e0;
-  color: #fff;
-  border: 1px solid #999;
-  border-radius: 2px !important;
-}
-.menu-lateral-visible {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  color: #000 !important;
-}
 /* ##################################################
 
   Barra
@@ -161,7 +121,7 @@ body {
 ##################################################### */
 
 header {
-  position: fixed;
+  position: absolute;
 
   top: 0;
   left: 0;
@@ -172,30 +132,10 @@ header {
   margin: 0;
   padding: 10px 5%;
 
-  z-index: 998;
+  z-index: 999;
 
   /*background-color: #000;*/
 }
-
-.scroll-down header {
-  /*top: -100px;*/
-  padding: 2px 5%;
-  background-color: #111c !important;
-  backdrop-filter: blur(10px);
-  /*opacity: 50%;*/
-  transition: .5s ease-out all;
-}
-.scroll-up header {
-  background-color: #111c !important;
-  backdrop-filter: blur(10px);
-  transition: .5s ease-out all;
-}
-  .scroll-down header .nav .titulo span {
-    display: none;
-  }
-  /*.scroll-down header .nav nav {
-    display: none;
-  }*/
 
 header .nav {
   height: auto;
@@ -229,7 +169,7 @@ header .nav {
 
     color: var(--color-portada-texto);
 
-    margin: 0 10px;
+    margin: 0;
     padding: 0;
   }
   header .nav nav {
@@ -257,84 +197,30 @@ header .nav {
             text-decoration: underline;
           }
 
-          header img {
-            border-radius: 0;
-          }
-          header .h-btn a {
-            cursor: pointer;
-            border: .5px solid #fff;
-            padding: 5px 10px;
-            transition: .2s ease-out all;
-          }
-          header .h-btn a:hover {
-            text-decoration: none;
-            transition: .2s ease-out all;
-            border-bottom: 2px solid #fff;
-          }
-          header .h-btn a:active {
-            text-decoration: none;
-            transition: .2s ease-out all;
-            border-bottom: 10px solid #fff;
-            border-right: 5px solid #fff;
-          }
-  header .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: -999;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: #111c !important;
-    backdrop-filter: blur(20px);
-    color: #fff;
-  }
-  .stopscrolling {
-    overflow: hidden;
-  }
-  header .menu .menu-caja {
-    padding: 50px 10%;
-  }
-    header .menu .menu-caja .caja-menu {
-      border-right: 1px solid #fff;
-      padding: 0 20px;
-    }
-  header .menu .menu-caja ul, header .menu .menu-caja li {
-    margin: 0;
-    padding: 0;
-  }
-  header .menu .menu-caja li {
+@media only screen and (max-width: 560px) {
+  header .nav {
     display: block;
-    font-size: 2em;
-    margin: 10px 0;
+    height: auto;
+    margin-top: 20px;
   }
-  header .menu .menu-caja li p {
-    opacity: 50%;
-    font-size: .5em;
+  header .nav .titulo {
+    width: 100% !important;
+    text-align: center;
 
-    margin-top: 0;
-    margin-left: 20px;
-
-    transition: .2s ease-out all;
+    margin-bottom: 20px;
   }
-    header .menu .menu-caja li:hover p {
-      opacity: 90%;
+  header .nav .sub-titulo {
+    width: 100% !important;
+    text-align: center;
 
-      transform: scale(110%);
-
-      transition: .2s ease-out all;
-    }
-
-  header .menu .menu-caja .redes {
-    margin-left: auto;
-    text-align: right;
+    margin-bottom: 20px;
   }
-
-  header .menu .menu-caja .redes li {
-    font-size: 1.4em;
+  header .nav nav {
+    margin-left: 0 !important;
+    width: 100% !important;
+    text-align: center;
   }
+}
 /* ##################################################
 
   Portada
@@ -426,9 +312,7 @@ header .nav {
       margin-bottom: 20px;
     }
     .inicio .portada .centro .caja {
-      margin-top: auto;
-      margin-left: 20px;
-      text-align: left;
+      text-align: center;
       /*display: flex;
       justify-content: center;
       align-items: center;*/
@@ -436,13 +320,8 @@ header .nav {
       .inicio .portada .centro .caja .titulo-1 {
         font-size: 1.2em;
         color: #fff;
-
-        margin-top: -20px;
         /*writing-mode:vertical-lr;
         text-orientation:upright;*/
-      }
-      .inicio .portada .centro .caja .titulo-1 p {
-        margin-left: -20px;
       }
       .miedo .portada .centro .caja .titulo-1, .vas .portada .centro .caja .titulo-1 {
         font-size: 1em;
@@ -468,22 +347,40 @@ header .nav {
         font-size: 3.5em;
       }
 
+      .inicio .portada .centro .caja span {
+        background-color: #fff;
+        color: #000;
+        padding: 10px 20px;
+      }
+
+/*@media only screen and (max-width: 560px) {
+  .portada .centro {
+    background-position-x: initial;
+    background-position-y: center;
+    background-size: 250%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .portada .centro {
+    background-position-x: initial;
+    background-position-y: center;
+    background-size: 200%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .portada .centro {
+    background-position-x: initial;
+    background-position-y: center;
+    background-size: 150%;
+  }
+}*/
+
 /* ##################################################
 
   Secciones Cahuich
   
 ##################################################### */
 
-.seccion-1 {
-  background-color: #111 !important;
-  height: 100vh;
-
-  text-align: justify !important;
-}
-.seccion-1 .cont-1 {
-  width: 40%;
-  margin-left: auto;
-}
 /* ##################################################
   Seccion portafolio
 ##################################################### */
@@ -493,7 +390,7 @@ header .nav {
 }
 .seccion-aviso {
   position: sticky;
-  top: 50px;
+  top: 0;
 
   width: auto;
   height: auto;
@@ -513,19 +410,16 @@ header .nav {
 }
 .seccion-portafolio {
   margin: 0;
-  padding: 0 10%;
+  padding: 0;
   margin-left: 0px;
-
-  background-color: #000;
-  color: #fff;
 }
 
 .ts {
   background-color: #000 !important;
-  background-image: url("../img/Inicio/spaceship-6997031_1920 2.jpg");
+  background-image: url("../img/Inicio/Asunto.png");
     background-position-x: left;
     background-position-y: bottom;
-    background-size: cover;
+    background-size: 80%;
     background-repeat: no-repeat;
     background-attachment: initial;
     background-origin: initial;
@@ -540,26 +434,73 @@ header .nav {
 }
 .ts .caja-2 {
   margin-left: auto;
-  margin-bottom: auto;
-
-  position: sticky;
-  top: 50px;
-  right: auto;
 }
 .creditos {
-  height: auto !important;
+  height: 50vh !important;
 
-  padding: 50px 0 !important;
+  background-color: #fff !important;
 
-  background-color: #000 !important;
+  color: #000 !important;
+}
 
-  color: #fff !important;
+@media only screen and (max-width: 560px) {
+  .seccion-portafolio {
+    margin-left: 50px !important;
+  }
+  .inicio .portada .centro .caja .titulo-2 {
+    font-size: 10em;
+  }
+  .inicio .portada .centro .caja .titulo-3 {
+    font-size: 2.8em;
+    margin-top: -50px;
+  }
 }
 /* ##################################################
 
   Secciones conteido
   
 ##################################################### */
+
+/* ##################################################
+  Seccion basica
+##################################################### */
+
+.seccion-basica {
+  background-color: #000;
+
+  color: #fff;
+
+  padding: 50px 10%;
+}
+  .inicio .seccion-basica {
+    background-color: #fff;
+    color: #fff;
+  }
+  .miedo .seccion-basica {
+    padding: 100px 10%;
+  }
+.seccion-basica-2 {
+  background-color: #111;
+
+  color: #fff;
+
+  padding: 50px 10%;
+}
+  .inicio .seccion-basica-2 {
+    background-color: #fff;
+    color: #000;
+  }
+  .miedo .seccion-basica-2 {
+    padding: 100px 10%;
+  }
+
+.seccion-basica .sub-titulo, .seccion-basica-2 .sub-titulo, .seccion-ce .sub-titulo {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.seccion-basica .titulo, .seccion-basica-2 .titulo, .seccion-ce .titulo {
+  margin-top: 0;
+}
 
 /* ##################################################
 
@@ -635,6 +576,20 @@ header .nav {
     margin-top: auto;
   }
 
+@media only screen and (max-width: 1050px) {
+  .inicio .inicio-s-1 .centro {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .inicio .inicio-s-1 .caja .interior h1 {
+    font-size: 1.5em !important;
+  }
+  .inicio .inicio-s-1 .caja .caja-auto {
+    padding: 0 5%;
+  }
+}
+
 .inicio .inicio-s-2 {
   padding: 50px 2%;
   height: auto;
@@ -643,9 +598,187 @@ header .nav {
     padding: 0 5%;
   }
   .inicio .inicio-s-2 img {
-    border-radius: 0px;
+    border-radius: 20px;
     border: 2px solid #f3f3f3;
   }
+/* ##################################################
+  Coleccion miedo
+##################################################### */
+
+.seccion-ce {
+  height: 90vh;
+  background-color: #000;
+
+  color: #fff;
+
+  padding: 0px 10%;
+  margin: 20px 10%;
+  border-radius: 10px;
+}
+
+.coleccion-miedo {
+  background-image: url("../img/Inicio/IMG_8663.jpeg");
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+
+  text-align: center;
+
+  padding: 0px 20%;
+}
+
+/* ##################################################
+  Coleccion vas
+##################################################### */
+
+.coleccion-vas {
+  background-image: url("../img/vas/IMG_8572.jpeg");
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+
+  text-align: center;
+
+  padding: 0px 20%;
+}
+
+/* ##################################################
+
+  Secciones Miedo
+##################################################### */
+
+/* ##################################################
+  Invitacion
+##################################################### */
+
+.invitacion {
+}
+
+/* ##################################################
+  Seccion-2
+##################################################### */
+
+.miedo .seccion-2 {
+  padding: 50px 25%;
+
+  text-align: center;
+}
+
+/* ##################################################
+  Seccion-4
+##################################################### */
+
+.miedo .seccion-4 {
+  padding: 50px 20%;
+
+  text-align: center;
+}
+
+/* ##################################################
+  Seccion-6
+##################################################### */
+
+.miedo .seccion-6 {
+  padding: 50px 15%;
+
+  text-align: center;
+}
+
+/* ##################################################
+  Seccion-6
+##################################################### */
+
+.inicio .seccion-mayor {
+  padding: 50px 20%;
+
+  height: auto;
+
+  text-align: center;
+
+  background-color: #fff;
+  color: #000;
+}
+
+.miedo .seccion-mayor {
+  padding: 0px 20%;
+
+  height: 100vh;
+
+  text-align: center;
+}
+
+.vas .seccion-mayor {
+  padding: 50px 20%;
+
+  height: auto;
+
+  text-align: center;
+
+  background-color: #fff;
+  color: #000;
+}
+/* ##################################################
+  Dt
+##################################################### */
+
+.seccion-dt {
+  padding: 0px 30%;
+
+  height: 100vh;
+
+  text-align: center;
+}
+
+.seccion-dt .caja {
+  background-color: #000;
+
+  border-radius: 10px;
+}
+
+/* ##################################################
+
+  Secciones vas
+##################################################### */
+
+.vas .seccion-basica {
+  background-color: #fff;
+
+  color: #000;
+}
+.vas .seccion-basica-2 {
+  background-color: #fff;
+
+  color: #000;
+}
+
+/* ##################################################
+  Invitacion
+##################################################### */
+
+.vas .invitacion {
+}
+
+.exhibidor-d .caja-3 {
+  text-align: right;
+}
+
+/* ##################################################
+  Seccion-vas-1
+##################################################### */
+
+.vas .seccion-vas-1 {
+  padding: 50px 25%;
+
+  text-align: center;
+}
 
 /* ##################################################
   Footer
@@ -655,9 +788,9 @@ footer {
   padding: 50px 10%;
 }
 .inicio footer {
-  background-color: #000;
+  background-color: #fff;
 
-  color: #fff;
+  color: #000;
 }
 .miedo footer {
   background-color: #000;
@@ -668,30 +801,6 @@ footer {
     text-align: center;
   }
 
-.footer-2 {
-  padding: 50px 10% 10px 10%;
-}
-.footer-2 .footer {
-  padding: 0 10%;
-}
-.inicio .footer-2 {
-  background-color: #000;
-
-  color: #fff;
-}
-footer .copy {
-  text-align: center;
-}
-
-.error {
-  font-weight: 100;
-  background-color: yellow;
-  color: #000;
-  width: auto;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-
 /* ##################################################
 
   cajas
@@ -699,28 +808,12 @@ footer .copy {
 ##################################################### */
 
 
-@media only screen and (max-width: 1050px) {
-  .inicio .inicio-s-1 .centro {
-    display: block !important;
-  }
-}
-
 @media only screen and (max-width: 850px) {
   /* Style adjustments for viewports that meet the condition */
   /*.caja, .caja-2, .caja-3, .caja-4, .caja-5, .caja-6, .contra-caja-2, .contra-caja-3, .contra-caja-4, .contra-caja-5, .contra-caja-6, .caja-center, .caja-d {
     display: block;
     width: 100%;
   }*/
-  header .nav .titulo {
-    width: auto;
-    max-width: auto;
-    min-width: auto;
-  }
-
-  header .nav nav li.no {
-    display: none !important;
-  }
-
   footer * {
     text-align: center;
   }
@@ -730,9 +823,6 @@ footer .copy {
   }
   .seccion-basica p, .seccion-basica-2 p {
     text-align: justify !important;
-  }
-  .inicio .inicio-s-1 {
-    padding: 50px 0% !important;
   }
   .vas .seccion-vas-1 {
     padding: 50px 10%;
@@ -746,69 +836,30 @@ footer .copy {
   .vas .exhibidor p, .vas .exhibidor-d p {
     text-align: center !important;
   }
-
-  .ts {
-    text-align: center;
-    height: 100vh;
-  }
-  .ts .caja-2 {
-    margin: 0;
-  }
 }
 
-@media only screen and (max-width: 560px) {
-  .seccion-aviso {
-    display: none;
-  }
 
-  header {
-    /*width: auto;
-  width: 90%;
 
-  margin: 0;
-  padding: 10px 5%;*/
-  }
-  header .nav {
-  }
-  header .nav .titulo {
-  }
-  header .nav .sub-titulo {
-  }
-  header .nav nav {
-  }
+/* ##################################################
 
-  header .menu .menu-caja li p {
-    display: none;
-  }
+    Botones
 
-  .inicio .portada .centro .caja .titulo-1 a {
-    display: block;
-  }
+##################################################### */
 
-  .inicio .portada .centro .caja .titulo-2 {
-    font-size: 10em;
-  }
-  .inicio .portada .centro .caja .titulo-3 {
-    font-size: 2.8em;
-    margin-top: -50px;
-  }
-
-  .seccion-1 {
-    height: auto;
-  
-    text-align: justify !important;
-  }
-  .seccion-1 .cont-1 {
-    width: auto;
-  }
-
-  .inicio .inicio-s-1 .caja .interior h1 {
-    font-size: 1.5em !important;
-  }
-  .inicio .inicio-s-1 .caja .caja-auto {
-    padding: 0 5%;
-  }
+/*a {
+  color: inherit;
 }
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.b-none {
+  cursor:default;
+  pointer-events: none;
+  opacity: 0.5;
+}*/
 
 
 /* ==========================================================================

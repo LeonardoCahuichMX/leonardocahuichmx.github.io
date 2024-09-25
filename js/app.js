@@ -1,4 +1,75 @@
 $(document).ready(function () {
+    var altoHeader = $("header").outerHeight();
+    var ventanaHeader = $(window).outerHeight();
+    //alert(ventanaHeader);
+    $("header .menu").css("padding-top", altoHeader);
+    $("header .menu").css("height", ventanaHeader)
+
+    $('header .menu').hide();
+    $("#menu-x").hide();
+    $("#menu").on( "click", function() {
+        //$('header .menu').show();
+        $('header .menu').fadeIn("slow");
+        $("#menu").toggle();
+        $("#menu-x").toggle();
+        //$("body").css("overflow", "hidden");
+        $('body').addClass('stopscrolling')
+    });
+    $("#menu-x").on( "click", function() {
+        //$('header .menu').hide();
+        $('header .menu').fadeOut("slow");
+        $("#menu").toggle();
+        $("#menu-x").toggle();
+        //$("body").css("overflow", "true");
+        $('body').removeClass('stopscrolling')
+    });
+
+    var ancho = window.innerWidth;
+    var alto = window.innerHeight;
+    $(window).scroll(function(){
+        if($(this).scrollTop() <= alto){
+            $('.cont-menu-lateral').removeClass('menu-lateral-visible');
+            /* ####Portada antigua $('.portada .caja').removeClass('caja-b');*/
+        }
+        if($(this).scrollTop() > alto) {
+            $('.cont-menu-lateral').addClass('menu-lateral-visible');
+            //alert("hola");
+            /* ####Portada antigua $('.portada .caja').addClass('caja-b');*/
+            //alert("hola");
+        }
+    });
+    $(window).scroll(function(){
+        if($(this).scrollTop() < 1){
+            $('.menu-lateral').removeClass('menu-lateral-scroll');
+        }
+        if($(this).scrollTop() > 1) {
+            $('.menu-lateral').addClass('menu-lateral-scroll');
+        }
+    });
+    
+    const body = document.body;
+    const nav = document.querySelector("header");
+    const scrollUp = "scroll-up";
+    const scrollDown = "scroll-down";
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll == 0) {
+        body.classList.remove(scrollUp);
+        return;
+    }
+    if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+        // down
+        body.classList.remove(scrollUp);
+        body.classList.add(scrollDown);
+    } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+        // up
+        body.classList.remove(scrollDown);
+        body.classList.add(scrollUp);
+    }
+    lastScroll = currentScroll;
+    });
 
     /******************************************************************************
  * Fin
@@ -26,5 +97,6 @@ $(document).ready(function () {
             });
         } // End if
     });
-      
+
+    $(".loader").fadeOut("slow");
 });
