@@ -149,10 +149,12 @@ body {
   color: #fff;
   border: 1px solid #999;
   border-radius: 2px !important;
+  opacity: 20%;
 }
 .menu-lateral-visible {
   background-color: rgba(255, 255, 255, 0.8) !important;
   color: #000 !important;
+  opacity: 100% !important;
 }
 /* ##################################################
 
@@ -760,6 +762,10 @@ footer .copy {
 }
 
 @media only screen and (max-width: 560px) {
+
+  .menu-lateral span {
+    display: none;
+  }
   .seccion-aviso {
     display: none;
   }
