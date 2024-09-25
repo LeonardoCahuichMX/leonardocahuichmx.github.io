@@ -46,9 +46,21 @@ $(document).ready(function () {
             $('.menu-lateral').addClass('menu-lateral-scroll');
         }
     });
+    $(window).scroll(function(){
+        if($(this).scrollTop() <= alto){
+            $('header').removeClass('header-scroll');
+            /* ####Portada antigua $('.portada .caja').removeClass('caja-b');*/
+        }
+        if($(this).scrollTop() > alto) {
+            $('header').addClass('header-scroll');
+            //alert("hola");
+            /* ####Portada antigua $('.portada .caja').addClass('caja-b');*/
+            //alert("hola");
+        }
+    });
     
     const body = document.body;
-    const nav = document.querySelector("header");
+    const nav = document.querySelector(".header-scroll");
     const scrollUp = "scroll-up";
     const scrollDown = "scroll-down";
     let lastScroll = 0;

@@ -161,7 +161,7 @@ body {
 ##################################################### */
 
 header {
-  position: fixed;
+  position: absolute;
 
   top: 0;
   left: 0;
@@ -176,8 +176,11 @@ header {
 
   /*background-color: #000;*/
 }
+.header-scroll {
+  position: fixed;
+}
 
-.scroll-down header {
+.scroll-down .header-scroll {
   /*top: -100px;*/
   padding: 2px 5%;
   background-color: #111c !important;
@@ -185,12 +188,12 @@ header {
   /*opacity: 50%;*/
   transition: .5s ease-out all;
 }
-.scroll-up header {
+.scroll-up .header-scroll {
   background-color: #111c !important;
   backdrop-filter: blur(10px);
   transition: .5s ease-out all;
 }
-  .scroll-down header .nav .titulo span {
+  .scroll-down .header-scroll .nav .titulo span {
     display: none;
   }
   /*.scroll-down header .nav nav {
