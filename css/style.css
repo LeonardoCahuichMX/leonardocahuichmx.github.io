@@ -231,7 +231,15 @@ header .nav {
 
     margin: 0;
     padding: 0;
+
+    transform: scale(180%) translate(-40%, 300%) rotate(90deg);
+    /*transform: scale(150%) translate(10%, 10%) rotate(90deg);*/
+    transition: .5s ease-out transform;
   }
+    .scroll-up header .nav .titulo, .scroll-down header .nav .titulo {
+      transform: none;
+      transition: .5s ease-out transform;
+    }
     header .nav .titulo a {
       text-decoration: none;
     }
@@ -869,6 +877,11 @@ footer .copy {
 ##################################################### */
 
 
+@media only screen and (max-width: 1250px) {
+  header .nav .titulo {
+    transform: scale(180%) translate(-35%, 300%) rotate(90deg);
+  }
+}
 @media only screen and (max-width: 1050px) {
   .inicio .inicio-s-1 .centro {
     display: block !important;
@@ -887,6 +900,10 @@ footer .copy {
     display: block;
     width: 100%;
   }*/
+  header .nav .titulo {
+    transform: scale(180%) translate(-30%, 300%) rotate(90deg);
+  }
+
   header .nav nav li.no {
     display: none !important;
   }
@@ -942,6 +959,10 @@ footer .copy {
 
 @media only screen and (max-width: 560px) {
 
+  header .nav .titulo {
+    transform: scale(160%) translate(-30%, 300%) rotate(90deg);
+  }
+
   .menu-lateral span {
     display: none;
   }
@@ -995,6 +1016,12 @@ footer .copy {
   }
   .inicio .inicio-s-1 .caja .caja-auto {
     padding: 0 5%;
+  }
+}
+@media only screen and (max-width: 350px) {
+
+  header .nav .titulo {
+    transform: scale(130%) translate(-35%, 300%) rotate(90deg);
   }
 }
 
