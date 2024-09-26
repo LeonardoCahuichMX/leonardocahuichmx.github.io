@@ -93,16 +93,21 @@ textarea {
 .inicio {
   --color-portada-texto: #fff;
   --foto-portada: url("../img/Inicio/space-8571725_1920.jpg");
+
+  --footer-fondo: #000;
+  --footer-color: #fff;
+}
+.portafolio-pag {
+  --color-portada-texto: #fff;
+  --foto-portada: url("../img/Inicio/space-8571725_1920.jpg");
+
+  --footer-fondo: #000;
+  --footer-color: #fff;
+}
+body.inicio, body.portafolio-pag {
+  background-color: #000;
 }
 
-.miedo {
-  --color-portada-texto: #fff;
-  --foto-portada: url("../img/Inicio/skull-5850552_1920.png");
-}
-.vas {
-  --color-portada-texto: #fff;
-  --foto-portada: url("../img/vas/IMG_8280.jpeg");
-}
 
 /* ##################################################
 
@@ -114,7 +119,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.loader {
+.loader, .recarga {
   position: fixed;
   top: 0;
   left: 0;
@@ -130,10 +135,13 @@ body {
 
   text-align: center;
 }
-.loader h1 {
+  .recarga {
+    display: none;
+  }
+.loader h1, .recarga h1 {
   margin-bottom: 0;
 }
-.loader h3 {
+.loader h3, .recarga h3 {
   margin-top: -40px;
   font-weight: 100;
 }
@@ -493,36 +501,30 @@ header .nav {
   Seccion portafolio
 ##################################################### */
 
-.aviso-caja {
-
-}
-.seccion-aviso {
+.titulo-portafolio {
+  font-size: 2em;
+  padding: 20px 5%;
+    
   position: sticky;
   top: 50px;
-
-  width: auto;
-  height: auto;
-  z-index: 999;
-
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-  text-orientation:sideways;
-
-  text-align: right;
-  padding-bottom: 50px;
-  margin-bottom: 50px;
-}
-.seccion-aviso span {
-  opacity: 0.5;
-  font-size: 80%;
+  z-index: 2;
 }
 .seccion-portafolio {
   margin: 0;
-  padding: 0 10%;
+  padding: 50px 0;
   margin-left: 0px;
 
   background-color: #000;
   color: #fff;
+  
+  z-index: 1;
+}
+
+.seccion-portafolio .centro-no {
+  padding: 0;
+  padding-left: 30%;
+  padding-right: 20%;
+  width: auto;
 }
 
 .ts {
@@ -551,6 +553,40 @@ header .nav {
   top: 50px;
   right: auto;
 }
+
+.anuncio-portafolio {
+  background-color: #000 !important;
+  background-image: url("../img/Inicio/portafolio-fondo 2.jpeg");
+    background-position-x: left;
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    /*backdrop-filter: blur(20px);*/
+
+  border-radius: 10px;
+  margin: 20px 5%;
+  margin-bottom: 50px;
+
+  color: #fff;
+}
+.anuncio-portafolio .fondo {
+  height: 80vh;
+
+  background-color: #0000006e;
+  backdrop-filter: blur(10px);
+  transition: .5s ease-out all;
+
+  border-radius: 10px;
+}
+.anuncio-portafolio .centro {
+}
+.anuncio-portafolio .caja-auto {
+  margin-top: auto;
+}
+
 .creditos {
   height: auto !important;
 
@@ -562,14 +598,84 @@ header .nav {
 }
 /* ##################################################
 
-  Secciones conteido
+  Portafolio
   
 ##################################################### */
 
 /* ##################################################
 
-  Secciones Inicio
+  Contenido
 ##################################################### */
+
+.portafolio-contenido {
+  padding: 0 4.5%;
+  margin: 0;
+  background-position-x: left;
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    backdrop-filter: blur(20px);
+    background-image: url("../img/Inicio/portafolio-fondo-2.png");
+}
+
+.portafolio-contenido .portafolio-contenido-cont {
+  padding: 0;
+  margin: 0;
+}
+
+.portafolio-contenido .pc-cajas {
+  background-color: #000 !important;
+    background-position-x: left;
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    backdrop-filter: blur(20px);
+  
+  margin: 20px 10px;
+
+  border-radius: 10px;
+
+  color: #fff;
+  transition: .5s ease-out all;
+
+  height: 400px;
+}
+  .portafolio-contenido .pc-cajas .centro {
+    background-color: #00000080;
+    /*backdrop-filter: blur(20px);*/
+    border-radius: 10px;
+    transition: .5s ease-out all;
+  }
+    .portafolio-contenido .pc-cajas .centro:hover {
+      /*backdrop-filter: blur(0px);*/
+      background-color: transparent;
+      transition: .5s ease-out all;
+    }
+      .portafolio-contenido .pc-cajas .centro:hover * {
+        opacity: 10%;
+      }
+  .portafolio-contenido .pc-cajas .caja-auto {
+    margin: 0 5%;
+    margin-top: auto;
+
+    margin-right: auto;
+    transition: .5s ease-out all;
+  }
+.portafolio-contenido .pc-cajas.ngosoufei-com {
+  background-image: url("../img/trabajos-independientes/ngosoufei-com.jpeg");
+}
+.portafolio-contenido .pc-cajas.tipo-5 {
+  background-image: url("../img/trabajos-independientes/Tipo-5.jpeg");
+}
+.portafolio-contenido .pc-cajas.cartel-1 {
+  background-image: url("../img/trabajos-independientes/cartel-1.jpeg");
+}
 
 /* ##################################################
   titulo de areas
@@ -596,22 +702,6 @@ header .nav {
   margin-left: 1px;
   margin-right: 0;
   font-size: 1.4em;
-}
-/* ##################################################
-  Invitacion
-##################################################### */
-
-.inicio .invitacion {
-  min-height: 100vh;
-
-  background-color: #fff;
-  color: #000;
-
-  padding: 0px 10%;
-  margin-top: 100px;
-}
-.inicio .invitacion .titulo {
-  border-bottom: 5px solid #000;
 }
 
 /* ##################################################
@@ -679,10 +769,19 @@ footer {
 .footer-2 .footer {
   padding: 0 10%;
 }
-.inicio .footer-2 {
-  background-color: #000;
+.footer-2 {
+  background-color: var(--footer-fondo);
 
-  color: #fff;
+  color: var(--footer-color);
+
+}
+.footer-2 p {
+  opacity: 30%;
+  transition: .2s ease-out all;
+}
+.footer-2 p:hover {
+  opacity: 100%;
+  transition: .2s ease-out all;
 }
 footer .copy {
   text-align: center;
@@ -695,6 +794,67 @@ footer .copy {
   width: auto;
   margin: 0 auto;
   border-radius: 10px;
+}
+
+/* ##################################################
+
+  framework
+  
+##################################################### */
+
+.sombras .creditos {
+  background-color: #000;
+  color: #fff;
+}
+
+.sec {
+
+}
+.sec-basica {
+  padding: 50px 10%;
+}
+.sec-basica-15 {
+  padding: 50px 15%;
+  text-align: center;
+}
+.sec-basica-20 {
+  padding: 50px 20%;
+  text-align: center;
+}
+.sec-basica-25 {
+  padding: 50px 25%;
+  text-align: center;
+}
+  .sec .sub-titulo {
+    font-weight: normal;
+    margin-bottom: 5px;
+  }
+  .sec .titulo {
+    margin-top: 0;
+  }
+
+.sec-color-1 {
+  background-color: #000;
+
+  color: #fff;
+}
+.sec-color-2 {
+  background-color: #111;
+
+  color: #fff;
+}
+
+
+.creditos {
+  padding: 0px 20%;
+
+  height: 100vh;
+
+  text-align: center;
+}
+.tecnico {
+  font-family: serif;
+  font-weight: 100;
 }
 
 /* ##################################################
@@ -751,6 +911,20 @@ footer .copy {
   .vas .exhibidor p, .vas .exhibidor-d p {
     text-align: center !important;
   }
+
+  .seccion-portafolio {
+    margin: 0;
+    padding: 0;
+  }
+    .seccion-portafolio .titulo-portafolio {
+      font-size: 1.5em;
+      position: relative;
+      top: auto;
+    }
+    .seccion-portafolio .centro-no {
+      padding: 0 5%;
+      width: auto;
+    }
 
   .ts {
     text-align: center;

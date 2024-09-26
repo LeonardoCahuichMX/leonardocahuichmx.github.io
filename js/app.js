@@ -3,6 +3,7 @@ $(document).ready(function () {
     var ventanaHeader = $(window).outerHeight();
     //alert(ventanaHeader);
     $("header .menu").css("padding-top", altoHeader);
+        $(".portafolio-pag .anuncio-portafolio").css("margin-top", altoHeader);
     $("header .menu").css("height", ventanaHeader)
 
     $('header .menu').hide();
@@ -23,6 +24,10 @@ $(document).ready(function () {
         //$("body").css("overflow", "true");
         $('body').removeClass('stopscrolling')
     });
+
+    if(window.innerWidth<850){
+        $(".menu-pagina").toggle();
+    }
 
     var ancho = window.innerWidth;
     var alto = window.innerHeight;
