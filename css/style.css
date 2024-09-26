@@ -868,6 +868,12 @@ footer .copy {
   .inicio .inicio-s-1 .centro {
     display: block !important;
   }
+  header .nav .titulo {
+    width: auto;
+    max-width: auto;
+    min-width: auto;
+  }
+
 }
 
 @media only screen and (max-width: 850px) {
@@ -876,12 +882,6 @@ footer .copy {
     display: block;
     width: 100%;
   }*/
-  header .nav .titulo {
-    width: auto;
-    max-width: auto;
-    min-width: auto;
-  }
-
   header .nav nav li.no {
     display: none !important;
   }
