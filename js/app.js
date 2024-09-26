@@ -2,15 +2,15 @@ $(document).ready(function () {
     var altoHeader = $("header").outerHeight();
     var ventanaHeader = $(window).outerHeight();
     //alert(ventanaHeader);
-    $("header .menu").css("padding-top", altoHeader);
+    $(".menu").css("padding-top", altoHeader);
         $(".portafolio-pag .anuncio-portafolio").css("margin-top", altoHeader);
-    $("header .menu").css("height", ventanaHeader)
+    $(".menu").css("height", ventanaHeader)
 
-    $('header .menu').hide();
+    $('.menu').hide();
     $("#menu-x").hide();
     $("#menu").on( "click", function() {
         //$('header .menu').show();
-        $('header .menu').fadeIn("slow");
+        $('.menu').fadeIn("slow");
         $("#menu").toggle();
         $("#menu-x").toggle();
         //$("body").css("overflow", "hidden");
@@ -18,7 +18,7 @@ $(document).ready(function () {
     });
     $("#menu-x").on( "click", function() {
         //$('header .menu').hide();
-        $('header .menu').fadeOut("slow");
+        $('.menu').fadeOut("slow");
         $("#menu").toggle();
         $("#menu-x").toggle();
         //$("body").css("overflow", "true");

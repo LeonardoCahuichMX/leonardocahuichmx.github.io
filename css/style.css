@@ -164,6 +164,71 @@ body {
   color: #000 !important;
   opacity: 100% !important;
 }
+
+/* ##################################################
+
+    Menu
+
+##################################################### */
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 998;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #111c !important;
+  backdrop-filter: blur(20px);
+  color: #fff;
+}
+.stopscrolling {
+  overflow: hidden;
+}
+.menu .menu-caja {
+  padding: 50px 10%;
+}
+  .menu .menu-caja .caja-menu {
+    border-right: 1px solid #fff;
+    padding: 0 20px;
+  }
+.menu .menu-caja ul, header .menu .menu-caja li {
+  margin: 0;
+  padding: 0;
+}
+.menu .menu-caja li {
+  display: block;
+  font-size: 2em;
+  margin: 10px 0;
+}
+.menu .menu-caja li p {
+  opacity: 50%;
+  font-size: .5em;
+
+  margin-top: 0;
+  margin-left: 20px;
+
+  transition: .2s ease-out all;
+}
+  .menu .menu-caja li:hover p {
+    opacity: 90%;
+
+    transform: scale(110%);
+
+    transition: .2s ease-out all;
+  }
+
+.menu .menu-caja .redes {
+  margin-left: auto;
+  text-align: right;
+}
+
+.menu .menu-caja .redes li {
+  font-size: 1.4em;
+}
 /* ##################################################
 
   Barra
@@ -305,64 +370,7 @@ header .nav {
             border-bottom: 10px solid #fff;
             border-right: 5px solid #fff;
           }
-  header .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: -999;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: #111c !important;
-    backdrop-filter: blur(20px);
-    color: #fff;
-  }
-  .stopscrolling {
-    overflow: hidden;
-  }
-  header .menu .menu-caja {
-    padding: 50px 10%;
-  }
-    header .menu .menu-caja .caja-menu {
-      border-right: 1px solid #fff;
-      padding: 0 20px;
-    }
-  header .menu .menu-caja ul, header .menu .menu-caja li {
-    margin: 0;
-    padding: 0;
-  }
-  header .menu .menu-caja li {
-    display: block;
-    font-size: 2em;
-    margin: 10px 0;
-  }
-  header .menu .menu-caja li p {
-    opacity: 50%;
-    font-size: .5em;
-
-    margin-top: 0;
-    margin-left: 20px;
-
-    transition: .2s ease-out all;
-  }
-    header .menu .menu-caja li:hover p {
-      opacity: 90%;
-
-      transform: scale(110%);
-
-      transition: .2s ease-out all;
-    }
-
-  header .menu .menu-caja .redes {
-    margin-left: auto;
-    text-align: right;
-  }
-
-  header .menu .menu-caja .redes li {
-    font-size: 1.4em;
-  }
+  
 /* ##################################################
 
   Portada
