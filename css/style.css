@@ -184,6 +184,8 @@ header {
 
   z-index: 998;
 
+  /*border-top: 1px solid #000;*/
+
   /*background-color: #000;*/
 }
 .header-scroll {
