@@ -645,6 +645,8 @@ header .nav {
   transition: .5s ease-out all;
 
   height: 400px;
+
+  cursor: pointer;
 }
   .portafolio-contenido .pc-cajas .centro {
     background-color: #00000080;
@@ -675,6 +677,9 @@ header .nav {
 }
 .portafolio-contenido .pc-cajas.cartel-1 {
   background-image: url("../img/trabajos-independientes/cartel-1.jpeg");
+}
+.portafolio-contenido .pc-cajas.blog {
+  background-image: url("../img/Inicio/ai-generated-8406468_1920.jpeg");
 }
 
 /* ##################################################

@@ -115,5 +115,16 @@ $(document).ready(function () {
         } // End if
     });
 
+
+    $(".ngosoufei-com").click(function(){
+        window.open("https://ngosoufei.com");
+    });
+    $(".cartel-1").click(function(){
+        window.open("https://www.instagram.com/p/DAHX88cqL_J/?igsh=NnN0ZzUwM2ZzaG9i");
+    });
+    /*$(".blog").on('click', function(){
+        window.open("https://ngosoufei.com");
+    })*/
+
     $(".loader").fadeOut("slow");
 });
