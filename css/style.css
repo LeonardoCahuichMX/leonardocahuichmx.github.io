@@ -275,9 +275,14 @@ header .nav {
         header .nav nav ul li a {
           text-decoration: none;
           color: var(--color-portada-texto);
+          opacity: 50%;
+        }
+        header .nav nav ul li.h-btn a {
+          opacity: 100%;
         }
           header .nav nav ul li:hover a {
             text-decoration: underline;
+            opacity: 100%;
           }
 
           header img {
